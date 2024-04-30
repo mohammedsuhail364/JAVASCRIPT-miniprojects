@@ -1,0 +1,8 @@
+li='aa a234bc@ sad$ hsagd^'
+count=0
+for i in li:
+    if 'a'<=i<='z' or 'A'<=i<='Z' or i in"123456789" or i==" ":
+        pass
+    else:
+        count+=1
+print(count)

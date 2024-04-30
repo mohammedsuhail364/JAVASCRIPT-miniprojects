@@ -1,0 +1,46 @@
+body
+{
+    background-color: blanchedalmond;
+}
+#pieChart
+        {
+            margin-left: 400px;
+        }
+        #color
+        {
+            display: grid;
+            gap: 5px;
+            margin-top: 30px;
+        }
+        #red
+        {
+            color: red;
+            background-color: red;
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+        }
+        #green
+        {
+            color: green;
+            background-color: green;
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+        }
+        #blue
+        {
+            color: red;
+            background-color: blue;
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+        }
+        #yellow
+        {
+            color: red;
+            background-color: yellow;
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+        }

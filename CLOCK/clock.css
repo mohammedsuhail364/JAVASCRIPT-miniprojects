@@ -1,0 +1,30 @@
+*{
+    background-color: grey;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+}
+#main
+{
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15em;
+    border: 3px solid;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 15em; */
+}
+span{
+    font-size:xx-large;
+    margin-left: 5px;
+}
+#ampm
+{
+    margin-left: 20px;
+}

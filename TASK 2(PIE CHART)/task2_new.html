@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <h3>1) What is your favorite programming language?</h3>
+    <input type="radio" name="opt" id="opt1" value="JavaScript" onclick="updateChart()">JAVA SCRIPT<br><br>
+    <input type="radio" name="opt" id="opt2" value="Python" onclick="updateChart()">PYTHON<br><br>
+    <input type="radio" name="opt" id="opt3" value="C" onclick="updateChart()">C<br><br>
+    <input type="radio" name="opt" id="opt4" value="Java" onclick="updateChart()">JAVA<br><br>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+const chartData = {
+  JavaScript: [30, 20, 10, 5, 3],
+  Python: [10, 15, 20, 25, 30],
+  C: [5, 10, 15, 20, 25],
+  Java: [20, 25, 30, 35, 40]
+};
+
+function updateChart() {
+  const selectedLanguage = document.querySelector('input[name="opt"]:checked').value;
+  const newData = chartData[selectedLanguage];
+
+  myChart.data.datasets[0].data = newData;
+  myChart.update();
+}
+
+const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+const yValues = chartData.JavaScript; 
+const barColors = ["red", "green","blue","orange","brown"];
+
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "World Wine Production 2018"
+    }
+  }
+});
+</script>
+
+</body>
+</html>
